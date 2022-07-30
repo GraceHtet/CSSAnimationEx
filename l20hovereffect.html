@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button Effect</title>
+	<style type="text/css">
+		body{
+			font-family: sans-serif;
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+
+		a{
+			display: block;
+			background-color: red;
+			color: #fff;
+			text-decoration: none;
+			font-size: 40px;
+			border: 5px solid #000;
+			padding: 40px 80px;
+
+			position: relative;
+
+			margin-bottom: 20px;
+
+			overflow: hidden;
+
+			transition: background .5s;
+
+		}
+		a::before,a::after{		
+			content: "";
+			width: 100%;
+			height: 100%;
+
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			clip-path: ellipse(50% 100%); /*ကွေးတာ*/
+
+			z-index: 1;
+
+			transition: transform .5s;
+		}
+		a::before{
+			background: linear-gradient(
+				/*0deg,*/
+				/*10deg,*/
+				/*50deg,*/
+				/*70deg,*/
+				/*90deg,*/
+				20deg, /*စောင်းတာ*/
+				transparent 70%,
+				yellow 50% ); /*linear က အနည်းဆုံး ၂ရောင်ဖြစ်ရမှာမို့ တရောင်ပဲလိုချင်လို့ transparent နဲ့ ရေးပေးလိုက်တာ အရောင်ဖောက်နိုင်တာ*/
+
+			/*background-size ကို background colorရှိတဲ့နေရာမှာပဲ‌ေရေးပေး*/
+			background-size: 20px; /*background color ကို ချုံ့တာ*/
+			/*background-repeat: repeat;*/ /* repeat က Xရော Yရောမှာ သွားတယ် */
+
+			/*background-size ပေးထားလို့ no-repeat ဆိုရင် တခုတည်းပဲပေါ်နေမှာ မျိုး*/
+
+			background-repeat: repeat-x; /*default - ပေးပေး မပေးပေး ရတယ် နောက် design ဖန်တီးချင်ရင် လို ရင် သုံးရအောင်*/ 
+
+			/*background-repeat: repeat-y;*/
+			/*background-repeat: no-repeat;*/
+
+			transform: translateY(-100%);
+		}
+
+		a::after{
+			background: linear-gradient(
+				200deg,
+				transparent 70%,
+				yellow 30%
+			);
+
+			background-size: 20px;
+
+			transform: translateY(100%);
+		}
+
+		a:hover::before,a:hover::after{
+			transform: translateY(0%);
+		}
+
+		a:hover{
+			background: #000;
+		}
+		button{
+			background: none;
+
+			font-size: 40px;
+			border: 5px solid #000;
+			padding: 40px 80px;
+
+			position: relative;
+
+			overflow: hidden;
+
+			transition: background-color .3s;
+		}
+
+		button::before{
+			content: "Press Me";
+			width: 100%;
+			height: 100%;
+
+			background: linear-gradient(
+				90deg,
+				transparent 70%,
+				red 30%
+			);
+
+			background-size: 20px;
+
+			background-repeat: repeat-x; /*default - ပေးပေး မပေးပေး ရတယ် နောက် design ဖန်တီးချင်ရင် လို ရင် သုံးရအောင်*/
+			color: #fff;
+
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			transform: translate(100%);
+
+			transition: transform .3s;
+
+		}
+
+		button:hover::before{
+			transform: translate(0%);
+		}
+
+		button:hover{
+			background-color: #000;
+		}
+
+		button::after{
+			content: "";
+			width: 100%;
+			height: 100%;
+			color: #fff;
+
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			display: flex;
+			justify-content: center;
+			text-align: center;
+
+			transform: scale(0);/* ဖျောက်တာ*/
+
+			transition: all 0.5s;
+		}
+
+		button:active::before{
+			content: "";
+			transform: translateY(-110%);
+		}
+
+		button:active::after{
+
+			content: "Thank You";
+			transform: scale(1) rotate(1turn);   /*scale 1 က ပြန်ဖော်တာ*/
+			/*transform: scale(1) rotate(360deg);*/
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<a href="#">Hover Me</a>
+		<button type="button">Hover Me</button>
+	</div>
+
+</body>
+</html>

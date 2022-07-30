@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transition Timing Function</title>
+	<style>
+		.container{
+			width: 1000px;
+			background: peachpuff;
+		}
+		.container .move{
+			width: 150px;
+			height: 50px;
+			background: papayawhip;
+			font-size: 20px;
+
+			text-align: center;
+			line-height: 50px;
+
+			margin: 10px 0px;
+
+			transition: transform 1s;
+		}
+		.container .move:hover{
+			transform: translate(850px);
+		}
+		#ease{
+			transition-timing-function: ease;
+		}
+		#easein{
+			transition-timing-function: ease-in;
+		}
+		#easeout{
+			transition-timing-function: ease-out;
+		}
+		#easeinout{
+			transition-timing-function: ease-in-out;
+		}
+		#linear{
+			transition-timing-function: linear;
+		}
+		#cubicbeizer{
+													/*initial					final
+													state 					state*/
+			transition-timing-function: cubic-bezier(0.11, 0.85, 0.04, -0.37);
+		}
+
+
+		/*transition timing funciton ၅မျိုးရှိ
+		ease - default
+			 - စလာတဲ့အချိန် နှေး အလယ်ကနေ အရှိန်နဲ့သွား အဆုံးလောက်ရောက်တဲ့အချိန် တဖြည်းဖြည်းနှေးသွား
+			 - slow faster slow
+		ease-in
+			 - စထွက်တဲ့အချိန် နှေး အဆုံးရောက်ရင် မြန်
+			 - slow fast
+		ease-out
+			 - စထွက်တဲ့မြန် target ရောက်ရင်နှေး
+			 - fast slow
+		ease-in-out
+			 - စထွက်ရင်နှေး အလယ်မြန် အဆုံးပြန်နှေး
+			 - slow fast slow
+		linear
+			 - တစ်သားတည်း
+			 - same rate 
+		cubic-bezier 
+			 - parameter လေးခုပါ
+			 - range က 0 - 1
+			 - 0 ဆိုမြန် 1ဆိုနှေး*/
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="ease" class="move">Ease</div>
+	</div>
+
+	<div class="container">
+		<div id="easein" class="move">Ease-In</div>
+	</div>
+
+	<div class="container">
+		<div id="easeout" class="move">Ease-Out</div>
+	</div>
+
+	<div class="container">
+		<div id="easeinout" class="move">Ease-In-Out</div>
+	</div>
+
+	<div class="container">
+		<div id="linear" class="move">Linear</div>
+	</div>
+
+	<div class="container">
+		<div id="cubicbezier" class="move">Cubic-Bezier</div>
+	</div>
+
+</body>
+</html>

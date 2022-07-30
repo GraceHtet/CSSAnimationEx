@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Key Frame</title>
+	<style type="text/css">
+		body{
+			padding: 0;
+			margin: 0;
+
+			background: #979797;
+		}
+		.box{
+			width: 200px;
+			height: 200px;
+			background: mistyrose;
+
+			animation-name: myani;
+			animation-duration: 5s;
+		}
+		@keyframes myani{
+			/*0%{
+				transform: translate(0);
+			}
+			50%{
+				transform: translate(500px);
+			}
+			100%{
+				transform: translateY(500px);*/
+				/*transform: translate(500px);*/
+				/*transform: translate(500px,500px);*/
+			/*}*/
+
+			0%{
+				transform: translate(0);
+			}
+			10%{
+				transform: translate(500px);
+			}
+			100%{
+				transform: translateX(500px) translateY(500px);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+</body>
+</html>

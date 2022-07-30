@@ -1,0 +1,60 @@
+<!-- 17Jun22 -->
+<!DOCTYPE html>
+<html>
+<head>	
+	<title>Key Frame</title>
+	<style type="text/css">
+		body{
+			padding: 0;
+			margin: 0;
+		}
+		div{
+			width: 150px;
+			height: 150px;
+
+			background-color: lightsteelblue;
+
+			/*animation-name: myani;*/
+			/*animation-duration: 3s;*/
+			/*animation-fill-mode: forwards;*/
+
+			/*animation-iteration-count: 	2;*/
+			/*animation-iteration-count: 	infinite;*/
+
+			/*animation-timing-function: ease;*/
+			/*animation-timing-function: ease-in;*/
+			/*animation-timing-function: ease-out;*/
+			/*animation-timing-function: ease-in-out;*/
+			/*animation-timing-function: linear;*/
+
+			/*animation-direction: normal;*/
+			/*animation-direction: reverse;*/
+
+			/*animation-iteration-count: infinite;*/
+			/*animation-direction: alternate; count infinite လုပ်ထားတော့ ဆုံးရင် အစပြန်သွားရမဲ့အစား alternateပေးထားလို့ အဲ့ဆုံးတဲ့နေရာကပဲ ပြန်တိုက်ပြီးထွက်လာ*/
+			/*animation-direction: alternate-reverse;*/
+
+
+
+			/*short hand*/
+			/*name duration iteration  fill	  timing   direction
+							count	   mode	 function            */
+			animation: myani 3s infinite forwards linear alternate;
+		}
+		@keyframes myani{
+			0%{
+				transform: translate(0px);
+			}
+			50%{
+				transform: translate(500px);
+			}
+			100%{
+				transform: translate(500px,500px);
+			}
+		}
+	</style>
+</head>
+<body>	
+	<div></div>
+</body>
+</html>

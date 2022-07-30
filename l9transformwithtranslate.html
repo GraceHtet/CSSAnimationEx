@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>	Transform with Translate</title>
+	<style type="text/css">
+		.container{
+			width: 1000px;
+			background: grey;
+		}
+		.container .move{
+			width: 150px;
+			height: 60px;
+			background: red;
+			color: #fff;
+			font-size: 20px;
+			padding: 10px 0;
+			margin: 20px 0;
+
+			text-align: center;
+			line-height: 60px;
+		}
+		#translate:hover{
+			/*translate(x);*/
+
+			/*transform: translate(100px);*/
+			/*transform: translate(-100px);*/
+
+			transform: translate(100%);
+		}
+		#translatex:hover{
+			transform: translateX(200%);
+		}
+
+		#translatey:hover{
+			transform: translateY(-100%);
+		}
+		#translatexy:hover{
+			transform: translate(50px,-80px);
+		}
+		img{
+			width: 300px;
+			display: block;
+
+			margin: auto;
+
+			transition: transform .5s;
+		}
+		img:hover{
+			/*transform: translate(200px);*/
+			/*transform: translateX(-150px);*/
+			/*transform: translateY(100%);*/
+			/*transform: translate(50%,-75%);*/
+
+			transform: translateX(-100px) translateY(150px);
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="translate" class="move">translate Me</div>
+	</div>
+
+	<div class="container">
+		<div id="translatexy" class="move">translate X,Y</div>
+	</div>
+
+	<div class="container">
+		<div id="translatex" class="move">translate X</div>
+	</div>
+
+	<div class="container">
+		<div id="translatey" class="move">translate Y</div>
+	</div>
+
+	<hr/>
+
+	<div>
+		<img src="./img/6.jpg" alt="child"/>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Translate in 3D</title>
+	<style type="text/css">
+
+		body{
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.container{
+			perspective: 600px;
+			/*perspective-origin: center;*/
+			/*perspective-origin: top;*/
+			/*perspective-origin: bottom;*/
+			/*perspective-origin: left;*/
+			/*perspective-origin: right;*/
+
+			/*perspective-origin: left top;*/
+			/*perspective-origin: left bottom ;*/
+			/*perspective-origin: right top;*/
+			/*perspective-origin: right bottom;*/
+
+			/*perspective-origin: 0 bottom;*/
+			/*perspective-origin: 50% bottom;*/
+			/*perspective-origin: 100% bottom;*/
+			/*perspective-origin: 0 top;*/
+			/*perspective-origin: 50% top;*/
+			perspective-origin: 100% top;
+		}
+		img{
+			width: 300px;
+			transition: transform 2s;
+		}
+		img:hover{
+			/*transform: translateZ(300px);*/
+			/*transform: translateZ(-300px);*/
+
+			transform: translateZ(400px);
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+
+		<img src='./img/6.jpg' alt="child"/>
+
+	</div>
+</body>
+</html>

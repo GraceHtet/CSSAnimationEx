@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transition</title>
+	<style>
+		.div1{
+			width: 290px;
+			height: 90px;
+			background: paleturquoise;
+			color: black;
+			font-size: 20px;
+
+			text-align: center;
+			line-height: 90px;
+
+			/*transitionကို parent မှာပဲပေး
+			transition:  property duration;
+			property က ကိုယ် transition လုပ်စေချင်တဲ့ property*/
+			/*transition-property: all;
+			transition-duration: 1s;*/
+			transition: all 1s;
+		}
+		.div1:hover{
+			background: mediumpurple;
+			color: #fff;
+		}
+		.div2{
+			width: 290px;
+			height: 90px;
+			background: paleturquoise;
+			color: black;
+			font-size: 20px;
+
+			text-align: center;
+			line-height: 90px;
+
+			/*transition-property: font-size;*/
+			/*transition-property: font-size,color;
+			transition-duration: 1s;*/
+
+			/*short hand*/
+			/*transition: font-size 2s,color 1s,background 0.5s;*/
+			transition:  all 1s;
+		}
+		.div2:hover{
+			background: dimgrey;
+			color: #fff;
+			font-size: 22px;
+
+		}
+	</style>
+</head>
+<body>
+
+	<div class="div1">CSS Transition Div1</div>
+
+	<hr/>
+
+	<div class="div2">CSS Transition Div2</div>
+
+	<hr/>
+</body>
+</html>

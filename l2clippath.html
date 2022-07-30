@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clip Path</title>
+	<style type="text/css">
+		.shape{
+			width: 500px;
+			height: 300px;
+
+			background: green;
+		}
+		#circle{
+			/*clip-path: circle();*/
+
+			/*clip-path: circle(200px);*/
+			/*clip-path: circle(100px);*/
+
+				/*circle(shape-radius at position)*/
+				/*default position - center*/
+			/*clip-path:  circle(200px at left);*/
+			/*clip-path:  circle(200px at right);*/
+			/*clip-path:  circle(200px at top;*/
+			/*clip-path:  circle(200px at bottom);*/
+			/*clip-path:  circle(200px at center);*/
+
+			/*left ကနေ စတွက်တာ*/
+			/*clip-path: circle(150px at 0px);*/
+			/*clip-path: circle(150px at 150px);*/
+			/*clip-path: circle(150px at 350px);*/
+
+			/*circle(shape-radius at width height)*/
+								/*from left 	top*/
+			/*clip-path: circle(150px at 50px 20px);*/
+			/*clip-path: circle(150px at 	350px 150px);*/
+
+			/*percent နဲ့ပေးလည်းရ*/
+			/*clip-path: circle(30%);*/
+
+			/*clip-path: circle(30% at 50%);*/
+			clip-path: circle(30% at 70% 40%);
+
+
+			/*position မှာ valueတစ်ခုတည်းဆိုရင် width အကွာအဝေးပဲ*/
+		}
+
+		#polygon{
+			clip-path: polygon(0% 2%, 100% 0%, 100% 25%,62% 26%,61% 100%,39% 100%,38% 26%, 0% 26%);
+		}
+
+		#ellipse{
+			/*clip-path: ellipse(100px 150px);*/
+
+			/*clip-path: ellipse(100% 30%);*/
+			/*clip-path: ellipse(10% 40%);*/
+
+			/*ellipse(shape-radius shape-height at position)*/
+			/*clip-path: ellipse(50px 100px at left);*/
+			/*clip-path: ellipse(50px 100px at right);*/
+			/*clip-path: ellipse(50px 100px at top);*/
+			/*clip-path: ellipse(50px 100px at bottom);*/
+			/*clip-path: ellipse(50px 100px at center);*/
+
+			/*ellipse(shape-radius shape-height at position)*/
+			/*clip-path: ellipse(50px 100px at 20%);*/
+			/*clip-path: ellipse(10% 40% at 70%);*/
+
+			/*ellipse(shape-radius shape-height at width height)*/
+			/*clip-path: ellipse(10% 40% at 20% 20%);*/
+			clip-path: ellipse(20% 50% at 70% 50%);
+
+		}
+	</style>
+</head>
+<body>
+	<img src="./img/6.jpg" id="circle" class="shape" alt="circle"/>
+
+
+	<hr/>
+
+
+	<img src="./img/6.jpg" id="polygon" class="shape" alt="polygon"/>
+
+
+	<hr/>
+	
+	<img src="./img/6.jpg" id="ellipse" class="shape" alt="ellipse"/>
+	
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Buttton Effect</title>
+	<style>
+		body{
+			font-family: sans-serif;
+			background: #000;
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		a{
+			text-decoration: none;
+			color: #fff;
+			font-size: 40px;
+
+			border: 5px solid #fff;
+
+			display: block;
+
+			padding: 40px 80px;
+
+			margin-bottom: 20px;
+
+			position: relative;
+		}
+		a::before{
+			content: '';
+			width: 100%;
+			height: 30%;
+			background: #fff;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			/*border-bottom-right-radius: 100%;*/
+			border-radius: 0 0 100% 0;
+
+			transition: all 0.5s;
+		}
+		a:hover::before{
+			height: 100%;
+
+			border-radius:0 0 0 100%;
+
+			z-index: -1;
+		}
+		a:hover{
+			color: #000;
+		}
+
+		button{
+			background: none;
+			color: hotpink	 ;
+			font-size: 40px;
+
+			border: 5px solid #fff;
+
+			padding: 40px 80px;
+
+			position: relative;
+		}
+		button::before{
+			content: '';
+			width: 100%;
+			height: 100%;
+
+			background:linear-gradient(	
+				90deg, 
+				mistyrose 50%,
+				transparent 90%);
+
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			z-index: -1;
+
+			transition: background 1s;
+		}
+		button::after{
+			content: '';
+			width: 100%;
+			height: 100%;
+
+			background: linear-gradient(
+				90deg,
+				transparent 30%,
+				paleturquoise 70%
+			);
+
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			z-index: -1;
+
+			transition: background 1s;
+		}
+		button:hover::before{
+			background: linear-gradient(
+				90deg,
+				transparent 30%,
+				mistyrose 70%
+			);
+		}
+		button:hover::after{
+			background:linear-gradient(	
+				90deg, 
+				paleturquoise 50%,
+				transparent 90%);
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<a href="#">Hover Me</a>
+		<button type="button">Hover Me</button>
+	</div>
+</body>
+</html>

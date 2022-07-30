@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transform with Scale</title>
+	<style>
+		.container{
+			width: 1000px;
+			background: plum;
+		}
+		.container .move{
+			width: 150px;
+			height: 60px;
+			background: mediumpurple;
+			color: #fff;
+			font-size: 20px;
+
+			margin: 20px 0px;
+
+			text-align: center;
+			line-height: 60px;
+		}
+		#scale:hover{
+			/*transform: scale(0); ပျောက်သွား
+			transform:  scale(1); default
+			transform: scale(2); 2ဆပိုကြီး
+			transform: scale(0.5); အဆဝက် သေးသွား*/
+
+			transform: scale(0.5);
+		}
+		#scalexy:hover{
+			/*transform: scale(1,1.5);*/
+			/*transform: scale(1.5,1);*/
+			transform: scale(1.5,0.5);
+		}
+		#scalex:hover{
+			transform: scaleX(1.5);
+		}
+		#scaley:hover{
+			transform: scaleY(0.5);
+		}
+
+		img{
+			width: 300px;
+
+			/*margin auto သုံးဖို့ imgက inline element ဖြစ်နေလို့ block element ပြောင်းတာ*/
+			display: block;
+			margin: auto;
+		}
+		img:hover{
+			/*transform: scale(2);*/
+
+			/*transform: scale(1.5,0.5);*/
+
+			/*transform: scaleX(2);*/
+
+			transform: scaleY(1.5);
+		}
+
+		/*
+		range က 0 to 1
+		0 - ပျောက်သွား
+		1 - default
+		scale(xy)
+		scale(x,y)
+		scaleX(x)
+		scaleY(y)*/
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="scale" class="move">Scale Me</div>
+	</div>
+
+	<div class="container">
+		<div id="scalexy" class="move">Scale X,Y</div>
+	</div>
+
+	<div class="container">
+		<div id="scalex" class="move">Scale X</div>
+	</div>
+
+	<div class="container">
+		<div id="scaley" class="move">Scale Y</div>
+	</div>
+
+	<hr/>
+
+	<div>
+		<img src="./img/6.jpg" alt="child"/>
+	</div>
+</body>
+</html>

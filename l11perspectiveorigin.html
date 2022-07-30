@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Perspective Origin</title>
+	<style type="text/css">
+		body{
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.container{
+			width: 500px;
+		}
+		.div1{
+			width: 250px;
+			height: 100px;
+			background: #efefef;
+
+			border: 1px solid black;
+			padding: 10px;
+
+			margin: auto;
+
+			perspective: 600px;
+			/*perspective-origin                                        : 	center;  default*/
+			/*perspective-origin: bottom;*/
+			/*perspective-origin: top;*/
+			/*perspective-origin: left;*/
+			/*perspective-origin: right;*/
+			/*perspective-origin: left top;*/
+			/*perspective-origin: left bottom	;*/
+			/*perspective-origin: right top;*/
+			/*perspective-origin: right bottom;*/
+
+			/*perspective-origin: 0 top;*/
+			/*perspective-origin: left top;*/
+			/*perspective-origin: 50% top;*/
+			perspective-origin: 100% top;
+		}
+		.div2{
+			background: #e5e5e5;
+			border: 1px solid black;
+
+			padding: 70px;
+			transform: rotateX(45deg);
+		}
+	</style>
+</head>
+<body>
+		<div class="container">
+
+			<div class="div1">Div 1
+				<div class="div2">Hey guys... i'm learning css animation.</div>
+			</div>
+		</div>
+</body>
+</html>

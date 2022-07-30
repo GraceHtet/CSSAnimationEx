@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Perspective</title>
+	<style type="text/css">
+	*{
+		perspective: 600px;
+	}
+	body{
+		height: 100vh;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.container{
+		width: 500px;
+		background: #f4f4f4;
+	}
+	.div1{
+		width: 250px;
+		height: 100px;
+		background: linear-gradient(black,silver);
+		border: 1px solid black;
+		box-shadow: -5px 0 10px rgba(0,0,0,0.7);
+
+		/*parent မှာပဲပေး */
+		/*perspective: 500px;*/
+		/*perspective: 100px;*/
+		/*perspective: 1000px;*/
+		/*perspective: 300px;*/
+
+		margin: auto;
+
+		padding: 10px;
+
+		position: relative;
+	}
+	.div2{
+		width: 200px;
+		height: 100px;
+		background: linear-gradient(black,silver);
+		border: 1px solid black;
+		box-shadow: -5px 0 10px rgba(0,0,0,0.7);
+
+		transform: rotateX(45deg);
+
+		padding: 50px;
+
+		position: absolute;
+		left: -20px;
+		top: -100%;
+
+		z-index: 1;
+	}
+	.div3{
+		width: 50px;
+		height: 100px;
+		background: conic-gradient(	silver 50%,grey 0 50%);
+		border-left: 1px dotted black;
+		border-right: 1px dotted black;
+
+		position: absolute;
+		left: 60%;
+		top: 17%;
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+
+		<div class="div1">DIV 1
+
+			<div class="div2">DIV 2</div>
+			<div class="div3">DIV 3</div>
+		</div>
+
+	</div>
+</body>
+</html>

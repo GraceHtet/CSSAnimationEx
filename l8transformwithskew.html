@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transform with Skew</title>
+	<style type="text/css">
+		.container{
+			width: 1000px;
+			background: grey;
+		}
+		.container .square{
+			width: 150px;
+			height: 60px;
+			background: red;
+			color: #fff;
+			font-size: 20px;
+			padding: 10px 0;
+			margin: 20px 0;
+
+			text-align: center;
+			line-height: 60px;
+		}
+		#skew:hover{
+			transform: skew(30deg);
+			/*transform: skew(-30deg);*/
+			/*90degပေးလိုက်ရင် လုံးဝဖိချလိုက်သလိုဖြစ်သွားလို့ ပြားသွား*/
+			/*transform: skew(90deg);*/
+		}
+		#skewxy:hover{
+			/*transform: skew(x deg, y deg);*/
+
+			transform: skew(30deg,-45deg);
+		}
+		#skewx:hover{
+			/*transform: skew(x deg, y deg);*/
+
+			transform: skewX(30deg);
+		}
+		#skewy:hover{
+			/*transform: skew(x deg, y deg);*/
+
+			transform: skewY(45deg);
+		}
+
+		img{
+			width: 300px;
+			display: block;
+
+			margin: auto;
+
+			transition: transform .5s;
+		}
+		img:hover{
+			/*transform: skew(10deg);*/
+			/*transform: skew(-10deg);*/
+
+			/*transform: skewX(10deg);*/
+
+			/*transform: skewY(10deg);*/
+
+			transform: skew(10deg, 20deg);
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div id="skew" class="square">Skew Me</div>
+	</div>
+
+	<div class="container">
+		<div id="skewxy" class="square">Skew XY</div>
+	</div>
+
+	<div class="container">
+		<div id="skewx" class="square">Skew X</div>
+	</div>
+
+	<div class="container">
+		<div id="skewy" class="square">Skew Y</div>
+	</div>
+
+	<hr/>
+
+	<div>
+		<img src="./img/6.jpg" alt="child"/>
+	</div>
+</body>
+</html>

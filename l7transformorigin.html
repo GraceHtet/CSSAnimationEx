@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transform Origin</title>
+	<style type="text/css">
+		body{
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		img{
+			width: 300px;
+			height: 200px;
+
+			transition: transform 2s;
+
+		}
+		img:hover{
+			transform: rotate(45deg);
+
+			/*transform-origin: center;  => default*/
+
+			/*transform-origin: center;*/
+			/*transform-origin: top;*/
+			/*transform: bottom;
+			transform: left;
+			transform: right;*/
+
+			/*transform-origin: left top;  (or) top left
+			transform-origin: right top;*/
+			/*transform-origin: left bottom;*/
+			/*transform-origin: right bottom;*/
+
+
+			/*with length
+			transform-origin: left top;
+
+			value တစ်ခုတည်းဆို horizontal only vertical center
+
+			transform-origin: 0;
+			transform-origin: 50%;
+			transform-origin: 100%;
+			transform-origin: 150px;*/
+			transform: 20% 80%;
+		}
+	</style>
+</head>
+<body>
+
+	<div>
+		<img src="./img/6.jpg" alt="child">
+	</div>
+</body>
+</html>

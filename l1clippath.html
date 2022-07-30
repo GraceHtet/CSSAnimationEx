@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Clip Path</title>
+	<style>
+		/*property: value;   => declaration*/
+
+		.square{
+			width: 100px;
+			height: 100px;
+			background: lightsteelblue;
+		}
+		.circle{
+			width: 100px;
+			height: 100px;
+			background: lightsteelblue;
+			border-radius: 50%;
+		}
+		.triangle{
+			width: 0px;
+			height: 0px;
+
+			border-left: 100px solid transparent;
+			border-right: 100px solid transparent;
+			border-bottom: 100px solid lightsteelblue;
+		}
+		.squareshape{
+			width: 100px;
+			height: 100px;
+			background-color: lightsteelblue;
+
+			float: left;
+			margin-right: 20px;
+		}
+		.circleshape{
+			width: 100px;
+			height: 100px;
+			background-color: lightsteelblue;
+
+			/*border-radius: 50%;*/
+			/*clip-path: circle(50%);    =>physically  မြင်ရတဲ့ဟာ*/
+			clip-path: circle(50%);
+
+			/*circleရဲ့ အပြင်ဘက်က shapeလေးရဲ့ ပုံစံကို ပြင်ပေးတာ 
+			နဂိုပုံစံက လေးထောင့်မို့ စာေတွက လေးထောင့်ပုံစံပဲပေါ်တာ ဖန်တီးလိုက်တဲ့ shapeရဲ့ ပုံစံအတိုင်းမမြင်ရဘဲ
+			shape outside က အဲ့ shape ရဲ့ ပုံစံအတိုင်း OR SHPAE မရှိဘဲ လွတ်နေတဲ့နေရာလေးကို ကိုယ်လိုချင်တဲ့ပုံစံအတိုင်းပြင်ပေးတာ
+			စာတွေက အဲ့shapeအတိုင်းပေါ်လာလိမ့်မယ်*/
+			shape-outside: circle();
+
+			float: left;
+			margin-right: 30px;
+		}
+		.ellipseshape{
+			width: 100px;
+			height: 100px;
+			background: lightsteelblue;
+
+			/*ellispe(width height)*/
+			clip-path: ellipse(30% 50%);
+
+			float: left;
+
+			shape-outside: ellipse();
+			margin-right: 30px;
+		}
+		.polygonshape{
+			width: 100px;
+			height: 100px;
+			background: lightsteelblue;
+
+			/*bennetfeely.com > clippy >custom polygon*/
+			/*t shape*/
+			/*clip-path: polygon(0% 0%,100% 0%, 100% 22%, 60% 22%, 59% 100%,39% 100%, 39% 22%,0% 22%);*/
+
+			/*v-shape*/
+			clip-path: polygon(0% 0%,28% 0%, 54% 73%, 74% 0%, 100% 0%,69% 100%, 39% 100%);
+
+			float: left;
+
+			/*t-shape*/
+			/*shape-outside: polygon(0% 0%,100% 0%, 100% 22%, 60% 22%, 59% 100%,39% 100%, 39% 22%,0% 22%);*/
+
+			/*v-shape*/
+			shape-outside: polygon(0% 0%,28% 0%, 54% 73%, 74% 0%, 100% 0%,69% 100%, 39% 100%);
+			margin-right: 30px;
+		}
+	</style>
+</head>
+<body>
+
+	7may22
+	<div class="square">Square</div>
+
+	<hr/>
+
+	<div class="circle">Circle</div>
+
+	<hr/>
+
+	<div class="triangle">Triangle</div>
+
+	<hr/>
+
+	<div>
+		<div class="squareshape"></div>
+		<p> You will be guided to notice certain symbols on the cards. Each card is full of
+symbols—but you will find that you notice one or two features that really
+stand out in each picture. These are what I call your intuition hooks. Once
+you hone in on these, go deeper and connect with how they make you feel.
+Don’t worry about the written card meanings in this book just yet. Say
+whatever comes to your mind straight away—before you begin to think what
+the symbols mean—and imagine yourself telling a story.
+To develop the reading, trying looking at the quick-reference meanings
+only (see pages 29 and 118) and then go back to the card images. Staying
+with the image as long as you can stimulates your intuition, which is essential
+to a reading, whereas reading the words engages your logical left brain,
+which often becomes the judge, questioning if you’ve got it “right.” You will be guided to notice certain symbols on the cards. Each card is full of
+symbols—but you will find that you notice one or two features that really
+stand out in each picture. These are what I call your intuition hooks. Once
+you hone in on these, go deeper and connect with how they make you feel.
+Don’t worry about the written card meanings in this book just yet. Say
+whatever comes to your mind straight away—before you begin to think what
+the symbols mean—and imagine yourself telling a story.
+To develop the reading, trying looking at the quick-reference meanings
+only (see pages 29 and 118) and then go back to the card images. Staying
+with the image as long as you can stimulates your intuition, which is essential
+to a reading, whereas reading the words engages your logical left brain,
+which often becomes the judge, questioning if you’ve got it “right.” You will be guided to notice certain symbols on the cards. Each card is full of
+symbols—but you will find that you notice one or two features that really
+stand out in each picture. These are what I call your intuition hooks. Once
+you hone in on these, go deeper and connect with how they make you feel.
+Don’t worry about the written card meanings in this book just yet. Say
+whatever comes to your mind straight away—before you begin to think what
+the symbols mean—and imagine yourself telling a story.
+To develop the reading, trying looking at the quick-reference meanings
+only (see pages 29 and 118) and then go back to the card images. Staying
+with the image as long as you can stimulates your intuition, which is essential
+to a reading, whereas reading the words engages your logical left brain,
+which often becomes the judge, questioning if you’ve got it “right.” 
+	</p>
+		
+	</div>
+
+	<hr/>
+
+	<div>
+		<div class="circleshape"></div>
+		<p> You will be guided to notice certain symbols on the cards. Each card is full of
+symbols—but you will find that you notice one or two features that really
+stand out in each picture. These are what I call your intuition hooks. Once
+you hone in on these, go deeper and connect with how they make you feel.
+Don’t worry about the written card meanings in this book just yet. Say
+whatever comes to your mind straight away—before you begin to think what
+the symbols mean—and imagine yourself telling a story.
+To develop the reading, trying looking at the quick-reference meanings
+only (see pages 29 and 118) and then go back to the card images. Staying
+with the image as long as you can stimulates your intuition, which is essential
+to a reading, whereas reading the words engages your logical left brain,
+which often becomes the judge, questioning if you’ve got it “right.” You will be guided to notice certain symbols on the cards. Each card is full of
+symbols—but you will find that you notice one or two features that really
+stand out in each picture. These are what I call your intuition hooks. Once
+you hone in on these, go deeper and connect with how they make you feel.
+Don’t worry about the written card meanings in this book just yet. Say
+whatever comes to your mind straight away—before you begin to think what
+the symbols mean—and imagine yourself telling a story.
+To develop the reading, trying looking at the quick-reference meanings
+only (see pages 29 and 118) and then go back to the card images. Staying
+with the image as long as you can stimulates your intuition, which is essential
+to a reading, whereas reading the words engages your logical left brain,
+which often becomes the judge, questioning if you’ve got it “right.” You will be guided to notice certain symbols on the cards. Each card is full of
+symbols—but you will find that you notice one or two features that really
+stand out in each picture. These are what I call your intuition hooks. Once
+you hone in on these, go deeper and connect with how they make you feel.
+Don’t worry about the written card meanings in this book just yet. Say
+whatever comes to your mind straight away—before you begin to think what
+the symbols mean—and imagine yourself telling a story.
+To develop the reading, trying looking at the quick-reference meanings
+only (see pages 29 and 118) and then go back to the card images. Staying
+with the image as long as you can stimulates your intuition, which is essential
+to a reading, whereas reading the words engages your logical left brain,
+which often becomes the judge, questioning if you’ve got it “right.” 
+	</p>
+		
+	</div>
+
+	<hr/>
+
+	<div>
+		<div class="ellipseshape"></div>
+		<p> You will be guided to notice certain symbols on the cards. Each card is full of
+symbols—but you will find that you notice one or two features that really
+stand out in each picture. These are what I call your intuition hooks. Once
+you hone in on these, go deeper and connect with how they make you feel.
+Don’t worry about the written card meanings in this book just yet. Say
+whatever comes to your mind straight away—before you begin to think what
+the symbols mean—and imagine yourself telling a story.
+To develop the reading, trying looking at the quick-reference meanings
+only (see pages 29 and 118) and then go back to the card images. Staying
+with the image as long as you can stimulates your intuition, which is essential
+to a reading, whereas reading the words engages your logical left brain,
+which often becomes the judge, questioning if you’ve got it “right.” You will be guided to notice certain symbols on the cards. Each card is full of
+symbols—but you will find that you notice one or two features that really
+stand out in each picture. These are what I call your intuition hooks. Once
+you hone in on these, go deeper and connect with how they make you feel.
+Don’t worry about the written card meanings in this book just yet. Say
+whatever comes to your mind straight away—before you begin to think what
+the symbols mean—and imagine yourself telling a story.
+To develop the reading, trying looking at the quick-reference meanings
+only (see pages 29 and 118) and then go back to the card images. Staying
+with the image as long as you can stimulates your intuition, which is essential
+to a reading, whereas reading the words engages your logical left brain,
+which often becomes the judge, questioning if you’ve got it “right.” You will be guided to notice certain symbols on the cards. Each card is full of
+symbols—but you will find that you notice one or two features that really
+stand out in each picture. These are what I call your intuition hooks. Once
+you hone in on these, go deeper and connect with how they make you feel.
+Don’t worry about the written card meanings in this book just yet. Say
+whatever comes to your mind straight away—before you begin to think what
+the symbols mean—and imagine yourself telling a story.
+To develop the reading, trying looking at the quick-reference meanings
+only (see pages 29 and 118) and then go back to the card images. Staying
+with the image as long as you can stimulates your intuition, which is essential
+to a reading, whereas reading the words engages your logical left brain,
+which often becomes the judge, questioning if you’ve got it “right.” 
+	</p>
+		
+	</div>
+
+	<hr/>
+
+	<div>
+		<div class="polygonshape"></div>
+		<p> You will be guided to notice certain symbols on the cards. Each card is full of
+symbols—but you will find that you notice one or two features that really
+stand out in each picture. These are what I call your intuition hooks. Once
+you hone in on these, go deeper and connect with how they make you feel.
+Don’t worry about the written card meanings in this book just yet. Say
+whatever comes to your mind straight away—before you begin to think what
+the symbols mean—and imagine yourself telling a story.
+To develop the reading, trying looking at the quick-reference meanings
+only (see pages 29 and 118) and then go back to the card images. Staying
+with the image as long as you can stimulates your intuition, which is essential
+to a reading, whereas reading the words engages your logical left brain,
+which often becomes the judge, questioning if you’ve got it “right.” You will be guided to notice certain symbols on the cards. Each card is full of
+symbols—but you will find that you notice one or two features that really
+stand out in each picture. These are what I call your intuition hooks. Once
+you hone in on these, go deeper and connect with how they make you feel.
+Don’t worry about the written card meanings in this book just yet. Say
+whatever comes to your mind straight away—before you begin to think what
+the symbols mean—and imagine yourself telling a story.
+To develop the reading, trying looking at the quick-reference meanings
+only (see pages 29 and 118) and then go back to the card images. Staying
+with the image as long as you can stimulates your intuition, which is essential
+to a reading, whereas reading the words engages your logical left brain,
+which often becomes the judge, questioning if you’ve got it “right.” You will be guided to notice certain symbols on the cards. Each card is full of
+symbols—but you will find that you notice one or two features that really
+stand out in each picture. These are what I call your intuition hooks. Once
+you hone in on these, go deeper and connect with how they make you feel.
+Don’t worry about the written card meanings in this book just yet. Say
+whatever comes to your mind straight away—before you begin to think what
+the symbols mean—and imagine yourself telling a story.
+To develop the reading, trying looking at the quick-reference meanings
+only (see pages 29 and 118) and then go back to the card images. Staying
+with the image as long as you can stimulates your intuition, which is essential
+to a reading, whereas reading the words engages your logical left brain,
+which often becomes the judge, questioning if you’ve got it “right.” 
+	</p>
+		
+	</div>
+
+	<hr/>
+</body>
+</html>

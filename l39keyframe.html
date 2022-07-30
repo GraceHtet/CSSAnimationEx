@@ -1,0 +1,109 @@
+<!-- 16july22 -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title>keyframe</title>
+	<style type="text/css">
+		body{
+			padding: 0;
+			margin: 0;
+		}
+		.box1{
+			width: 150px;
+			height: 150px;
+			background: powderblue;
+
+			animation-name: myani;
+			animation-duration: 3s;
+
+			animation-fill-mode: forwards; /*animation ကို သူ့နောက်ဆုံး ဆုံးတဲ့ နေရာမှာပဲရပ်နေစေချင်တဲ့ မူလနေရာကို ပြန်မရောက်သွားစေချင်တဲ့အခါသုံး*/
+
+			/*animation-fill-mode: backwards; - default*/ 
+
+			animation-delay: 1s; /*screenပေါ်တာနဲ့ or refresh လုပ်လိုက်တာနဲ့ ချက်ချင်းတန်းစတာမျိုး မဖြစ်စေချင်ဘဲ ခဏ စောင့်စေချင်ရင် transition-delay နဲ့တူ*/
+		}
+		.box2{
+			width: 150px;
+			height: 150px;
+			background-color: orange;
+
+			animation-name: myrules;
+			animation-duration: 3s;
+
+			animation-fill-mode: forwards;
+		}
+		.box3{
+			width: 150px;
+			height: 150px;
+			background: violet;
+
+			position:relative;
+
+			animation-name: myshakes;
+			animation-duration: 3s;
+		}
+		/*@keyframes myani{
+			0%{
+				transform: translate(0px);
+			}
+			50%{
+				transform: translateX(800px);
+			}
+			100%{
+				transform: translateX(800px) translateY(500px);
+			}
+		}*/
+
+		/*@keyframes myrules{
+			0%{
+				background-color: violet;
+				transform: translate(0px);
+			}
+			25%{
+				background-color: orange;
+				transform: translate(300px);
+			}
+			50%{
+				background-color: blue;
+				transform: translate(300px,300px);
+			}
+			75%{
+				background-color: green;
+				transform: translate(0,300px);
+			}
+			100%{
+				background-color: black;
+				transform: translate(0);
+			}
+		}*/
+
+		@keyframes myshakes{
+			12.5%{
+				left: -100px;
+			}
+			25%{
+				left: 100px;
+			}
+			37.5%{
+				left: -50px;
+			}
+			50%{
+				left: 50px;
+			}
+			62.5%{
+				left: -25px;
+			}
+			75%{
+				left: 25px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="box1"></div>
+	<hr/>
+	<div class="box2"></div>
+	<hr/>
+	<div class="box3"></div>
+</body>
+</html>

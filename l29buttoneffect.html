@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button Effect</title>
+	<style type="text/css">
+		body{
+			font-family: sans-serif;
+			height: 100vh;
+
+			background: thistle;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+		.btn{
+			width: 350px;
+			height: 65px;
+
+			background-color: #555;
+			border: none;
+
+			box-shadow: 5px 5px 1px rgba(0,0,0,0.3);
+
+			position: relative;
+
+			overflow: hidden;
+		}
+		.btn span{
+			font-size: 	20px;
+			color: #fff;
+			text-transform: uppercase;
+			letter-spacing: 5px;
+
+			display: block;
+
+			/*scaleသုံးဖို့က block element ဖြစ်မှရ*/
+			transform: scaleX(0.6);
+			transform-origin: left;
+
+			transition: all 0.5s;
+		}
+		.btn em{
+			width: 100%;
+			height: 1px;
+			background: #fff;
+
+			/*display: block;*/
+			/*display: block မသုံးလည်း position :absolute နဲ့ရ*/
+
+			position: absolute	;
+			top: 50%;
+			left: 0;
+
+			transform: scaleX(0.25);
+			transform-origin: right;
+
+			transition: all 0.5s;
+		}
+		.btn::before{
+			content: '';
+			width: 100%;
+			height: 40%;
+			background: #fff;
+
+			position: absolute;
+			left: 0;
+			top: 0;
+
+			transform: translateX(-100%);
+
+			transition: transform 0.5s ease-in-out;			
+		}
+		.btn::after{
+			content: '';
+			width: 100%;
+			height: 40%;
+			background: #fff;
+
+			position: absolute;
+			left: 0;
+			bottom: 0;
+
+			transform: translateX(100%);
+
+			transition: transform 0.5s ease-in-out;
+		}
+		.btn:hover::before{
+			transform: translateX(90%) skew(45deg);
+		}
+		.btn:hover::after{
+			transform: translateX(-90%) skew(-45deg);
+		}
+		.btn:hover span{
+			color: fuchsia;
+		}
+		.btn:hover em{
+			left: -15%;
+		}
+	</style>
+</head>
+<body>						
+												<!-- emplasis element - itallic <i> tag နဲ့တူ inline element ပဲ -->
+	<button type="button" class="btn"><span>Read More...</span><em></em></button>
+</body>
+</html>

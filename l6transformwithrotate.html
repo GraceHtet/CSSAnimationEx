@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Transform with Rotate</title>
+	<style>
+		.container{
+			width: 1000px;
+			background: powderblue;
+		}
+		.container .move{
+			width: 150px;
+			height: 60px;
+			background: aliceblue;
+			font-size: 20px;
+			margin: 20px 0;
+
+			text-align: center;
+			line-height: 60px;
+		}
+		#rotate:hover{
+			/*rotate(deg) - default clockwise*/
+			/*transform: rotate(45deg);*/
+			/*transform: rotate(-45deg);*/
+			/*transform: rotate(90deg);*/
+			transform: rotate(180deg);
+		}
+		#rotatex:hover{
+			/*transform: rotateX(45deg);*/
+			/*transform: rotateX(-45deg);*/
+			transform: rotateX(90deg);
+		}
+		#rotatey:hover{
+			/*transform: rotateY(45deg);
+			transform: rotateY(-45deg);*/
+			transform: rotateY(90deg);
+		}
+		img{
+			width: 300px;
+
+			display: block;
+			margin: auto;
+
+			transition: transform 2s;
+		}
+		img:hover{
+			/*transform: rotate(45deg);*/
+			/*transform: rotate(-45deg);*/
+			/*transform: rotate(90deg);*/
+			/*transform: rotate(180deg);*/
+			/*transform: rotate(360deg);*/
+
+			/*transform: rotate(1turn);*/
+			/*transform: rotate(-1.5turn);*/
+
+			/*400grad = 360deg*/
+			/*transform: rotate(400grad);*/
+			/*transform: rotate(-200grad);*/
+
+			/*transform: rotateX(100grad);*/
+
+			transform: rotateY(100deg);
+
+		}
+		/*rotate(xy)
+		rotateX(x)
+		rotateY(y)*/
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div id="rotate" class="move">Rotate Me</div>
+	</div>
+
+	<div class="container">
+		<div id="rotatex" class="move">Rotate X</div>
+	</div>
+
+	<div class="container">
+		<div id="rotatey" class="move">Rotate Y</div>
+	</div>
+
+	<hr/>
+
+	<div>
+		<img src="./img/6.jpg" alt="child"/>
+	</div>
+</body>
+</html>
